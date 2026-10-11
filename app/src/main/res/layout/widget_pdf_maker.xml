@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@drawable/bg_widget"
+    android:padding="14dp">
+    <View android:id="@+id/widgetAccentBar" android:layout_width="match_parent"
+        android:layout_height="6dp" android:layout_marginBottom="8dp" />
+    <LinearLayout android:id="@+id/widgetHeader"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+        <TextView android:text="PDF Maker" android:textSize="16sp"
+            android:textStyle="bold" android:textColor="@color/text_primary" />
+        <TextView android:text="Quick actions" android:textSize="11sp"
+            android:textColor="@color/text_secondary" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout android:id="@+id/cellScan"
+            android:orientation="vertical" android:layout_width="0dp"
+            android:layout_weight="1" android:layout_height="wrap_content"
+            android:gravity="center" android:padding="8dp">
+            <TextView android:text="📷" android:textSize="22sp" />
+            <TextView android:text="Scan" android:textSize="11sp" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/cellInvoice"
+            android:orientation="vertical" android:layout_width="0dp"
+            android:layout_weight="1" android:layout_height="wrap_content"
+            android:gravity="center" android:padding="8dp">
+            <TextView android:text="🧾" android:textSize="22sp" />
+            <TextView android:text="Invoice" android:textSize="11sp" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/cellReceipt"
+            android:orientation="vertical" android:layout_width="0dp"
+            android:layout_weight="1" android:layout_height="wrap_content"
+            android:gravity="center" android:padding="8dp">
+            <TextView android:text="🧾" android:textSize="22sp" />
+            <TextView android:text="Receipt" android:textSize="11sp" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/cellResume"
+            android:orientation="vertical" android:layout_width="0dp"
+            android:layout_weight="1" android:layout_height="wrap_content"
+            android:gravity="center" android:padding="8dp">
+            <TextView android:text="👤" android:textSize="22sp" />
+            <TextView android:text="Resume" android:textSize="11sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginTop="6dp">
+        <LinearLayout android:id="@+id/cellCert"
+            android:orientation="vertical" android:layout_width="0dp"
+            android:layout_weight="1" android:layout_height="wrap_content"
+            android:gravity="center" android:padding="8dp">
+            <TextView android:text="🏆" android:textSize="22sp" />
+            <TextView android:text="Certificate" android:textSize="11sp" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/cellPacking"
+            android:orientation="vertical" android:layout_width="0dp"
+            android:layout_weight="1" android:layout_height="wrap_content"
+            android:gravity="center" android:padding="8dp">
+            <TextView android:text="📦" android:textSize="22sp" />
+            <TextView android:text="Packing" android:textSize="11sp" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/cellText"
+            android:orientation="vertical" android:layout_width="0dp"
+            android:layout_weight="1" android:layout_height="wrap_content"
+            android:gravity="center" android:padding="8dp">
+            <TextView android:text="📄" android:textSize="22sp" />
+            <TextView android:text="Text" android:textSize="11sp" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/cellMore"
+            android:orientation="vertical" android:layout_width="0dp"
+            android:layout_weight="1" android:layout_height="wrap_content"
+            android:gravity="center" android:padding="8dp">
+            <TextView android:text="📚" android:textSize="22sp" />
+            <TextView android:text="Library" android:textSize="11sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

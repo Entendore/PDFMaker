@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true" android:background="?android:attr/colorBackground">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:padding="16dp">
+        <LinearLayout android:id="@+id/settingsRow"
+            android:orientation="horizontal" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:gravity="center_vertical"
+            android:padding="12dp" android:background="@drawable/bg_card"
+            android:layout_marginBottom="8dp">
+            <View android:id="@+id/colorDot" android:layout_width="24dp"
+                android:layout_height="24dp" android:layout_marginEnd="12dp" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="Accent color"
+                android:textSize="15sp" android:textStyle="bold" />
+            <TextView android:text="⚙" android:textSize="20sp" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/statsRow"
+            android:orientation="horizontal" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:gravity="center_vertical"
+            android:padding="12dp" android:background="@drawable/bg_card"
+            android:layout_marginBottom="16dp">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="Usage stats"
+                android:textSize="15sp" android:textStyle="bold" />
+            <TextView android:id="@+id/tvStatsLine" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textSize="12sp"
+                android:textColor="@color/text_secondary" android:text="…" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/lockRow"
+            android:orientation="horizontal" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:gravity="center_vertical"
+            android:padding="12dp" android:background="@drawable/bg_card"
+            android:layout_marginBottom="16dp">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="App lock (fingerprint / PIN)"
+                android:textSize="15sp" android:textStyle="bold" />
+            <androidx.appcompat.widget.SwitchCompat android:id="@+id/swLock"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView android:text="Create" android:textSize="13sp"
+            android:textStyle="bold" android:textColor="@color/text_secondary"
+            android:layout_marginBottom="4dp" />
+        <LinearLayout android:id="@+id/createGrid"
+            android:orientation="vertical" android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView android:text="Tools" android:textSize="13sp"
+            android:textStyle="bold" android:textColor="@color/text_secondary"
+            android:layout_marginTop="16dp" android:layout_marginBottom="4dp" />
+        <LinearLayout android:id="@+id/toolsGrid"
+            android:orientation="vertical" android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <HorizontalScrollView android:id="@+id/chipsHost"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:scrollbars="none" />
+        <TextView android:text="Recently used PDFs" android:textSize="13sp"
+            android:textStyle="bold" android:textColor="@color/text_secondary"
+            android:layout_marginTop="16dp" android:layout_marginBottom="4dp" />
+        <EditText android:id="@+id/etSearchRecents"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Search PDFs…" android:inputType="text"
+            android:background="@drawable/bg_card" android:padding="12dp"
+            android:layout_marginBottom="4dp" />
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+            <TextView android:id="@+id/tvRecentsHint" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:textSize="12sp" android:textColor="@color/text_secondary" />
+            <Button android:id="@+id/btnSort" android:text="⇅ Newest"
+                android:background="@android:color/transparent"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/folderChipsRow"
+            android:orientation="horizontal" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginBottom="8dp" />
+        <LinearLayout android:id="@+id/recentsBox"
+            android:orientation="vertical" android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout android:id="@+id/selectionBar"
+            android:orientation="horizontal" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:visibility="gone"
+            android:gravity="center" android:padding="8dp">
+            <TextView android:id="@+id/tvSelCount" android:layout_width="0dp"
+                android:layout_weight="1" android:layout_height="wrap_content"
+                android:textSize="14sp" android:textStyle="bold" />
+            <Button android:id="@+id/btnShareSel" android:text="Share" />
+            <Button android:id="@+id/btnMergeSel" android:text="Merge" />
+            <Button android:id="@+id/btnMoveSel" android:text="Move" />
+            <Button android:id="@+id/btnDeleteSel" android:text="Delete" />
+            <Button android:id="@+id/btnCancelSel" android:text="Cancel" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
