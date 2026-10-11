@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-feature android:name="android.hardware.camera.any" android:required="false" />
+    <application android:name=".PdfMakerApp" android:allowBackup="true"
+        android:icon="@drawable/ic_launcher" android:label="PDF Maker"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:fullBackupContent="@xml/backup_rules"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:theme="@style/Theme.PDFMaker">
+        <activity android:name=".MainActivity" android:exported="true" android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="application/pdf" /><data android:mimeType="image/*" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="application/pdf" /><data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".CreateActivity" android:exported="false" />
+        <activity android:name=".BrowseActivity" android:exported="false" />
+        <activity android:name=".ConvertActivity" android:exported="false" />
+        <activity android:name=".PreviewActivity" android:exported="false" />
+        <activity android:name=".FillPdfActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".FormFieldsActivity" android:exported="false" />
+        <activity android:name=".ReorderActivity" android:exported="false" />
+        <activity android:name=".MergeFilesActivity" android:exported="false" />
+        <activity android:name=".ImagePrepareActivity" android:exported="false" />
+        <activity android:name=".ScanActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".BookBuilderActivity" android:exported="false" />
+        <activity android:name=".TocActivity" android:exported="false" />
+        <activity android:name=".UsageActivity" android:exported="false" />
+        <activity android:name=".TemplatesActivity" android:exported="false" />
+        <activity android:name=".EditHubActivity" android:exported="false" />
+        <activity android:name=".LockActivity" android:exported="false" android:excludeFromRecents="true" />
+        <receiver android:name=".PdfWidgetProvider" android:exported="true" android:label="@string/widget_label">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/pdf_widget_info" />
+        </receiver>
+        <provider android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider" android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+</manifest>

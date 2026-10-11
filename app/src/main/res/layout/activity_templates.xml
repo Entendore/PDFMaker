@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:padding="12dp">
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp">
+        <Button android:id="@+id/btnExportTpl" android:text="Export"
+            android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <Button android:id="@+id/btnImportTpl" android:text="Import"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginStart="6dp" />
+    </LinearLayout>
+    <TextView android:id="@+id/tvTplHint" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:textSize="12sp"
+        android:textColor="@color/text_secondary" android:layout_marginBottom="6dp" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout android:id="@+id/tplBox"
+            android:orientation="vertical" android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+</LinearLayout>

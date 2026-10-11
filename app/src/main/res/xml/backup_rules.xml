@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <include domain="sharedpref" path="settings.xml" />
+    <include domain="sharedpref" path="pdf_templates.xml" />
+    <include domain="sharedpref" path="fill_memory.xml" />
+    <exclude domain="sharedpref" path="app_lock.xml" />
+</full-backup-content>
